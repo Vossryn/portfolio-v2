@@ -16,9 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="w-full h-full">
       <body
-        className={`${roboto.className} bg-black text-white w-screen h-screen`}
+        className={`${roboto.className} bg-black text-white w-full h-full flex flex-col`}
       >
         <Header />
         {children}
