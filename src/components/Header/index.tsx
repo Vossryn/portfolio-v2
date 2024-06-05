@@ -27,7 +27,7 @@ const _Links: linkProps[] = [
 
 export default function Header() {
   return (
-    <div className="flex justify-between items-center p-2 font-orbitron font-bold text-lg text-yellow-300 border-b border-b-yellow-300">
+    <div className="flex justify-between items-center p-2 font-orbitron font-bold text-lg bg-black text-yellow-300 border-b border-b-yellow-300">
       <div>Britton Flynt</div>
       <div className="sm:hidden">
         <HamburgerMenuIcon className="w-8 h-8 hover:bg-yellow-300 hover:text-black" />
