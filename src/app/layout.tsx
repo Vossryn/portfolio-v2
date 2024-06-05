@@ -16,7 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-full h-full">
+    <html
+      lang="en"
+      className="w-full h-full scrollbar-thumb-yellow-300 scrollbar-track-black scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
+    >
       <body
         className={`${roboto.className} bg-black text-white w-full h-full flex flex-col`}
       >
