@@ -1,6 +1,6 @@
 export default function Profile() {
   return (
-    <div id="#profile" className="bg-circuit-board w-full h-40">
+    <div id="#profile" className="bg-circuit-board">
       Profile
     </div>
   );

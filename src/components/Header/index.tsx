@@ -30,7 +30,7 @@ export default function Header() {
     <div className="flex justify-between items-center p-2 font-orbitron font-bold text-lg bg-black text-yellow-300 border-b border-b-yellow-300">
       <div>Britton Flynt</div>
       <div className="sm:hidden">
-        <HamburgerMenuIcon className="w-8 h-8 hover:bg-yellow-300 hover:text-black" />
+        <HamburgerMenuIcon className="w-10 h-10 hover:bg-yellow-300 hover:text-black" />
       </div>
       <ul className="hidden sm:flex space-x-2">
         {_Links.map((di) => (
@@ -41,7 +41,7 @@ export default function Header() {
           >
             {di.name}
             <div className="absolute bg-black rotate-45 w-8 h-8 -right-4"></div>
-            <div className="absolute bg-black w-16 h-1 top-0 right-0 overflow-hidden"></div>
+            <div className="absolute bg-black w-16 h-1 top-0 right-0"></div>
           </Link>
         ))}
       </ul>

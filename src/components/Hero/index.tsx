@@ -1,38 +1,54 @@
+"use client"
+
 import Image from "next/image";
 
 import "@/css/glitch-effect.css";
+import { useEffect, useState } from "react";
+
+const titles = [
+  "Front-end",
+  "Back-end",
+  "UX/UI Design"
+]
 
 export default function Hero() {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      let newIndex = index + 1
+      if (newIndex > titles.length - 1) newIndex = 0
+      setIndex(newIndex)
+    }, 5000)
+
+    return clearInterval(interval)
+  }, [])
+
   return (
-    <div className="h-full flex flex-col justify-center items-center bg-hero-pattern bg-cover bg-top overflow-hidden">
-      <div className="relative flex flex-col items-center">
-        <Image
-          src="/android-chrome-512x512.png"
-          alt="Site Logo"
-          className="w-[350px] sm:w-[400px] md:w-[500px]"
-          width={500}
-          height={500}
-        />
-        <div className="absolute top-0 -left-12 -rotate-12 text-center text-8xl md:text-9xl mt-14 md:mt-28">
-          <div className="font-cyberpunk font-extrabold absolute top-0 left-0 text-black">
+    <div className="flex-none h-[calc(100%-60px)] flex flex-col justify-center items-center bg-hero-pattern bg-cover bg-top">
+      <div className="grow flex flex-col items-center justify-center">
+        <div className="flex-none relative m-8">
+          <Image
+            src="/android-chrome-512x512.png"
+            alt="Site Logo Image"
+            className="w-full"
+            width={500}
+            height={500}
+          />
+          <div className="absolute top-8 -rotate-12 text-center text-6xl font-cyberpunk text-yellow-300">
             Britton
             <br />
             Flynt
           </div>
-          <div className="font-cyberpunk absolute top-0 left-0 text-yellow-300">
-            Britton
-            <br />
-            Flynt
+          <div
+            className="absolute bottom-0 w-full hero glitch layers font-orbitron text-center text-4xl"
+            data-text={titles[index]}
+          >
+            <span>{titles[index]}</span>
           </div>
         </div>
       </div>
-      <div
-        className="hero glitch layers font-orbitron text-center text-xl md:text-2xl"
-        data-text="Web Developer"
-      >
-        <span>Web Developer</span>
-      </div>
-      <div className="absolute bg-hero-pattern-fader h-16 w-full bottom-0"></div>
+      <div className="bg-hero-pattern-fader h-16 w-full"></div>
     </div>
   );
 }

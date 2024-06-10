@@ -1,6 +1,4 @@
 .hero {
-  font-size: clamp(40px, 10vw, 100px);
-  line-height: 1;
   display: inline-block;
   color: #fff;
   z-index: 2;
@@ -403,11 +401,11 @@
 }
 
 .glitch::before {
-  animation: paths 5s step-end infinite, opacity 5s step-end infinite,
-    font 8s step-end infinite, movement 10s step-end infinite;
+  animation: paths 5s step-end infinite, opacity 5s step-end infinite, font 8s step-end infinite,
+    movement 10s step-end infinite;
 }
 
 .glitch::after {
-  animation: paths 5s step-end infinite, opacity 5s step-end infinite,
-    font 7s step-end infinite, movement 8s step-end infinite;
+  animation: paths 5s step-end infinite, opacity 5s step-end infinite, font 7s step-end infinite,
+    movement 8s step-end infinite;
 }

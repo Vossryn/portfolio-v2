@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
@@ -23,7 +22,6 @@ export default function RootLayout({
       <body
         className={`${roboto.className} bg-black text-white w-full h-full flex flex-col`}
       >
-        <Header />
         {children}
       </body>
     </html>
