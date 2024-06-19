@@ -19,7 +19,7 @@ export default function LinkButton({ href, name }: linkProps) {
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className="relative px-4 py-2 text-yellow-300 hover:text-cyan-300 min-w-28"
-      style={{ ...borderImageStyle }}
+      style={borderImageStyle}
     >
       <span>
         {name}
