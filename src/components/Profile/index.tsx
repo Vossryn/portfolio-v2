@@ -21,7 +21,7 @@ export default function Profile() {
               <p>
                 I'm a highly motivated web developer that loves to work on both the front-end and back-end of the tech stack.
                 Having always had a passionn for creating, designing and building things I discoverd one day, during an elective
-                class,
+                class
               </p>
             </div>
           </div>
