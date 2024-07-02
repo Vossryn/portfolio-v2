@@ -1,0 +1,14 @@
+.corner-clip-br {
+  position: relative;
+  height: 100%;
+}
+
+.corner-clip-br::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 80px solid rgb(253, 224, 71, 1);
+  border-left: 80px solid rgba(0, 0, 0, 0);
+  width: 0;
+}
