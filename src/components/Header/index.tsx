@@ -4,19 +4,19 @@ import LinkButton from "./LinkButton";
 
 const _Links: linkProps[] = [
   {
-    href: "#home",
+    href: "/#home",
     name: "Home",
   },
   {
-    href: "#profile",
+    href: "/#profile",
     name: "Profile",
   },
   {
-    href: "#projects",
+    href: "/#projects",
     name: "Projects",
   },
   {
-    href: "#contact",
+    href: "/#contact",
     name: "Contact",
   },
 ];

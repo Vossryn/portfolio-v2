@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 
-import "@/css/glitch-effect.css";
 import { useEffect, useState } from "react";
+import "@/css/glitch-effect.css";
+import "@/css/hero-text-stroke.css";
 
 const titles = ["Front-end", "Back-end"];
 
@@ -31,7 +32,7 @@ export default function Hero() {
             width={500}
             height={500}
           />
-          <div className="absolute top-8 lg:top-16 lg:-left-4 -rotate-12 text-center text-6xl lg:text-9xl font-cyberpunk text-yellow-300">
+          <div className="hero-name absolute top-8 lg:top-16 lg:-left-4 -rotate-12 text-center text-6xl lg:text-9xl font-cyberpunk text-yellow-300">
             Britton
             <br />
             Flynt

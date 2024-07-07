@@ -11,7 +11,7 @@ export default function SectionHeading({ heading }: SectionHeadingProps) {
 
   return (
     <h1 className="flex-grow font-orbitron text-yellow-300 text-5xl my-8 h-20 flex flex-col justify-center" style={borderImageStyle}>
-      <span>{heading}</span>
+      <span className="pl-4">{heading}</span>
     </h1>
   )
 }
