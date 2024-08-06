@@ -24,15 +24,13 @@ export default function Hero() {
   return (
     <div className="flex-none h-[calc(100%-60px)] flex flex-col justify-center items-center bg-hero-pattern bg-cover bg-top">
       <div className="grow w-full flex flex-col items-center justify-center overflow-hidden">
-        <div className="flex-none relative mx-4 mt-4 md:mx-8 md:mt-8">
+        <div className="relative w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] mx-4 mt-4 md:mx-8 md:mt-8">
           <Image
             src="/android-chrome-512x512.png"
             alt="Site Logo Image"
-            className="w-full h-full"
-            width={500}
-            height={500}
+            fill
           />
-          <div className="hero-name absolute top-8 lg:top-16 lg:-left-4 -rotate-12 text-center text-6xl lg:text-9xl font-cyberpunk text-yellow-300">
+          <div className="hero-name absolute top-8 -left-4 sm:top-16 -rotate-12 text-center text-6xl sm:text-8xl font-cyberpunk text-yellow-300">
             Britton
             <br />
             Flynt
@@ -45,7 +43,7 @@ export default function Hero() {
           <span>{titles[index]}</span>
         </div>
       </div>
-      <div className="flex-none bg-hero-pattern-fader h-16 w-full"></div>
+      <div className="flex-none bg-gradient-to-t from-black h-16 w-full"></div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import SectionHeading from "../SectionHeading";
+import SectionHeading from "../Section";
 
 export default function Contact() {
   return (

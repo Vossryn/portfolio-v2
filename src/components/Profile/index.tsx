@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import SectionHeading from "../SectionHeading";
+import Section from "../Section";
 import AboutMeItem from "./AboutMeItem";
 
 import "./styles.css";
@@ -9,7 +9,7 @@ export default function Profile() {
   return (
     <div id="profile" className="bg-circuit-board pt-8 pb-24">
       <div className="p-4 sm:p-0 sm:w-3/5 sm:m-auto">
-        <SectionHeading heading="Profile" />
+        <Section heading="Profile" subHeading="" />
         <div className="bg-yellow-300 p-0.5">
           <div className="corner-clip-br bg-black text-white p-4 pb-8 gap-4 flex flex-col sm:flex-row">
             <div>

@@ -1,7 +1,7 @@
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Profile from "@/components/Profile";
-import Projects from "@/components/Projects";
+import Work from "@/components/Work";
 import Header from "@/components/Header";
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
       <Header />
       <Hero />
       <Profile />
-      <Projects />
-      <Contact />
+      {/* <Work /> */}
+      {/* <Contact /> */}
     </>
   );
 }
