@@ -8,7 +8,7 @@ interface SectionWrapperProps {
 const SectionWrapper = ({ Component, idName }: SectionWrapperProps) =>
   function HOC() {
     return (
-      <div id={idName}>
+      <div id={idName} className="p-4 sm:p-0 sm:w-3/5 sm:m-auto">
         <Component />
       </div>
     )
