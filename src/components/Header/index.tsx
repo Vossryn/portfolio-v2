@@ -8,12 +8,12 @@ const _Links: linkProps[] = [
     name: "Home",
   },
   {
-    href: "/#profile",
-    name: "Profile",
+    href: "/#about",
+    name: "About",
   },
   {
-    href: "/#projects",
-    name: "Projects",
+    href: "/#work",
+    name: "Work",
   },
   {
     href: "/#contact",
@@ -22,7 +22,6 @@ const _Links: linkProps[] = [
 ];
 
 export default function Header() {
-
   return (
     <div className="flex justify-between items-center p-2 font-orbitron font-bold text-lg bg-black text-yellow-300 border-b border-b-yellow-300">
       <div>Britton Flynt</div>
