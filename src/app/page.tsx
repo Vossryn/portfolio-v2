@@ -7,9 +7,11 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <Work />
-      <Contact />
+      <div className="bg-black p-8 sm:p-0 sm:w-3/5 sm:m-auto space-y-4">
+        <About />
+        <Work />
+        <Contact />
+      </div>
     </>
   );
 }

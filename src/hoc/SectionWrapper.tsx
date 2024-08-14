@@ -6,14 +6,18 @@ const SectionWrapper = (
 ) =>
   function HOC() {
     return (
-      <div id={idName} className="p-4 sm:p-0 sm:w-3/5 sm:m-auto">
+      <div id={idName} className="px-12">
         {heading && (
-          <h1 className="flex-grow font-orbitron text-yellow-300 text-5xl">
+          <h1 className="flex-grow font-orbitron text-yellow-300 text-5xl pt-4 pb-8">
             {heading}
           </h1>
         )}
-        {subHeading && <h3>{subHeading}</h3>}
-        <Component />
+        {subHeading && (
+          <h3>{subHeading}</h3>
+        )}
+        <div className="px-4">
+          <Component />
+        </div>
       </div>
     );
   };
