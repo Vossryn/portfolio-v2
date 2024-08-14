@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 
-import { useEffect, useState } from "react";
 import "@/css/glitch-effect.css";
 import "@/css/hero-text-stroke.css";
+import { useEffect, useState } from "react";
 
 const titles = ["Front-end", "Back-end"];
 
@@ -29,6 +29,7 @@ export default function Hero() {
             src="/android-chrome-512x512.png"
             alt="Site Logo Image"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="hero-name absolute top-8 -left-4 sm:top-16 -rotate-12 text-center text-6xl sm:text-8xl font-cyberpunk text-yellow-300">
             Britton

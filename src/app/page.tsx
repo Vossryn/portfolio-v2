@@ -3,11 +3,13 @@ import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Work from "@/components/Work";
 
+import "./styles.css";
+
 export default function Home() {
   return (
     <>
       <Hero />
-      <div className="bg-black p-8 sm:p-0 sm:w-3/5 sm:m-auto space-y-4">
+      <div className="with-fader bg-black p-4 sm:p-0 sm:w-3/5 sm:m-auto space-y-4 relative">
         <About />
         <Work />
         <Contact />

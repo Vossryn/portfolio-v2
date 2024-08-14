@@ -1,0 +1,18 @@
+.with-fader {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    left: -9999px;
+    right: -9999px;
+    top: 0;
+    height: 5rem;
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 25%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
