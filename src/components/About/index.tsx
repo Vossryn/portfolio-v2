@@ -4,10 +4,10 @@ import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { aboutItems } from "@/constants";
+import { aboutItems, technologies } from "@/constants";
 import { SectionWrapper } from "@/hoc";
 
-import JobTimeline from "./JobTimeline";
+import BallCanvas from "./Ball";
 import "./styles.css";
 
 const About = () => {
@@ -47,7 +47,16 @@ const About = () => {
           </Tilt>
         ))}
       </div>
-      <JobTimeline />
+
+      <div className="flex flex-row flex-wrap justify-center items-center gap-8">
+        {technologies.map((icon) => {
+          return (
+            <div key={icon} className="h-32 w-32">
+              <BallCanvas icon={icon} />
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 };

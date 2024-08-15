@@ -76,6 +76,30 @@ export const jobHistory: {
   },
 ];
 
-export const projects = [];
+export const projects: {
+  image: string;
+  title: string;
+  description: string;
+  tech: string[];
+  links: {
+    href: string;
+    name: string;
+  }[];
+}[] = [];
 
-export const technologies = [];
+export const technologies: string[] = [
+  "nextjs",
+  "react",
+  "javascript",
+  "typescript",
+  "css3",
+  "html5",
+  "nodejs",
+  "npm",
+  "git",
+  "github",
+  "threejs",
+  "jquery",
+  "mysql",
+  "postgresql",
+];
