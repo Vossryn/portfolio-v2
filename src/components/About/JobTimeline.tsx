@@ -47,6 +47,7 @@ const TimeLineItem = ({
         }}
         contentArrowStyle={{ borderRight: "7px solid  #334155" }}
         date={date}
+        dateClassName="mx-4"
         iconStyle={{
           background: "#67e8f9",
           color: "#fff",

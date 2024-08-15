@@ -29,7 +29,7 @@ const About = () => {
       </p>
       <div className="flex flex-row flex-wrap justify-center items-center my-8">
         {aboutItems.map((di, index) => (
-          <Tilt key={index}>
+          <Tilt key={index} scale={1.15} transitionSpeed={2500}>
             <Card
               style={borderImageStyle}
               className="w-[250px] h-[300px] bg-black text-white border-0 m-4"
