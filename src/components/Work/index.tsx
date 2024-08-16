@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 
+import { projects } from "@/constants";
 import { SectionWrapper } from "@/hoc";
 import JobTimeline from "./JobTimeline";
-import { projects } from "@/constants";
 
 const ProjectCard = ({
   orientation = "left",
@@ -55,7 +55,13 @@ const ProjectCard = ({
             text-center
           `}
         >
-          <Image src={image} alt={`${title} site image`} width={475} height={238} className="rounded-md border border-cyan-300" />
+          <Image
+            src={image}
+            alt={`${title} site image`}
+            width={475}
+            height={238}
+            className="rounded-md border border-cyan-300"
+          />
         </div>
         <div className="w-full">
           {title && <div>{title}</div>}
@@ -80,7 +86,13 @@ const Work = () => {
       </p>
       <JobTimeline />
       <div className="space-y-4 mt-8">
-        {projects.map((di, i) => (<ProjectCard orientation={i % 2 === 0 ? "left" : "right"} {...di} />))}
+        {projects.map((di, i) => (
+          <ProjectCard
+            orientation={i % 2 === 0 ? "left" : "right"}
+            {...di}
+            key={i}
+          />
+        ))}
       </div>
     </>
   );
