@@ -26,7 +26,7 @@ const ProjectCard = ({
   }[];
 }) => {
   return (
-    <Tilt>
+    <Tilt transitionSpeed={2500}>
       <div
         className={`
           flex 
@@ -39,8 +39,8 @@ const ProjectCard = ({
           border-yellow-300
           bg-black
           p-2
-          shadow-md
-          shadow-yellow-200
+          hover:shadow-md
+          hover:shadow-cyan-300
         `}
       >
         <div
@@ -79,7 +79,7 @@ const Work = () => {
         webtoons, light novels and books or playing D&D things with my friends.
       </p>
       <JobTimeline />
-      <div className="space-y-4 mt-4">
+      <div className="space-y-4 mt-8">
         {projects.map((di, i) => (<ProjectCard orientation={i % 2 === 0 ? "left" : "right"} {...di} />))}
       </div>
     </>
