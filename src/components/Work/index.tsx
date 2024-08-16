@@ -1,14 +1,29 @@
 "use client";
 
+import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 
 import { SectionWrapper } from "@/hoc";
 import JobTimeline from "./JobTimeline";
+import { projects } from "@/constants";
 
 const ProjectCard = ({
   orientation = "left",
+  image = "",
+  title = "",
+  description = "",
+  techs = [],
+  links = [],
 }: {
   orientation?: "left" | "right";
+  image: string;
+  title: string;
+  description: string;
+  techs: string[];
+  links: {
+    href: string;
+    name: string;
+  }[];
 }) => {
   return (
     <Tilt>
@@ -24,23 +39,27 @@ const ProjectCard = ({
           border-yellow-300
           bg-black
           p-2
+          shadow-md
+          shadow-yellow-200
         `}
       >
         <div
           className={`
             flex-none
-            w-64
-            h-48 
-            ${orientation === "right" ? "ml-4" : "mr-4"}
+            w-fit 
+            mb-4
+            sm:mb-0
+            ${orientation === "right" ? "sm:ml-4" : "sm:mr-4"}
             bg-slate-700 
             rounded-sm 
+            text-center
           `}
-        ></div>
+        >
+          <Image src={image} alt={`${title} site image`} width={475} height={238} className="rounded-md border border-cyan-300" />
+        </div>
         <div className="w-full">
-          <div>Project Title</div>
-          <div>Project Description</div>
-          <div>Project Tech</div>
-          <div>Poeject Links</div>
+          {title && <div>{title}</div>}
+          {description && <div>{description}</div>}
         </div>
       </div>
     </Tilt>
@@ -61,9 +80,7 @@ const Work = () => {
       </p>
       <JobTimeline />
       <div className="space-y-4 mt-4">
-        <ProjectCard orientation="left" />
-        <ProjectCard orientation="right" />
-        <ProjectCard orientation="left" />
+        {projects.map((di, i) => (<ProjectCard orientation={i % 2 === 0 ? "left" : "right"} {...di} />))}
       </div>
     </>
   );

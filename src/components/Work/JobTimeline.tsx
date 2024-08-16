@@ -38,7 +38,7 @@ const TimeLineItem = ({
     <div ref={ref}>
       <VerticalTimelineElement
         visible={inView}
-        position={Math.abs(index % 2) === 1 ? "right" : "left"}
+        position={index % 2 === 0 ? "right" : "left"}
         className="vertical-timeline-element--work"
         contentStyle={{
           background: "#334155",
@@ -64,7 +64,7 @@ const TimeLineItem = ({
           />
         }
       >
-        <h3 className="vertical-timeline-element-title">{title}</h3>
+        <h3 className="vertical-timeline-element-title font-bold text-lg">{title}</h3>
         <h4 className="vertical-timeline-element-subtitle">{company}</h4>
         <h4 className="vertical-timeline-element-subtitle">{location}</h4>
         <p>{description}</p>

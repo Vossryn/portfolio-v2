@@ -80,12 +80,26 @@ export const projects: {
   image: string;
   title: string;
   description: string;
-  tech: string[];
+  techs: string[];
   links: {
     href: string;
     name: string;
   }[];
-}[] = [];
+}[] = [
+  {
+    image: "/images/southern_district_website_screen_shot.png",
+    title: "Southern District BSA Website",
+    description:
+      "Website built for the Southern District East Carolina Council Scouting group in North Carolina.",
+    techs: [],
+    links: [
+      {
+        href: "https://southerndistrictscouting.org/",
+        name: "Southern District of ECC Scouting",
+      },
+    ],
+  },
+];
 
 export const technologies: string[] = [
   "nextjs",
