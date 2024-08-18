@@ -1,13 +1,15 @@
 "use client";
 
-import { jobHistory } from "@/constants";
 import Image from "next/image";
-import { useInView } from "react-intersection-observer";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+
+import { Button } from "@/components/ui/button";
+import { jobHistory } from "@/constants";
+import { useInView } from "react-intersection-observer";
+
 import "react-vertical-timeline-component/style.min.css";
 
 const TimeLineItem = ({
@@ -67,9 +69,29 @@ const TimeLineItem = ({
         <h3 className="vertical-timeline-element-title font-bold text-lg">
           {title}
         </h3>
-        <h4 className="vertical-timeline-element-subtitle">{company}</h4>
-        <h4 className="vertical-timeline-element-subtitle">{location}</h4>
-        <p>{description}</p>
+        <div className="flex flex-col justify-between gap-4">
+          <div>
+            <h4 className="vertical-timeline-element-subtitle text-slate-400">
+              {company}
+            </h4>
+            <h4 className="vertical-timeline-element-subtitle text-slate-400">
+              {location}
+            </h4>
+            <p>{description}</p>
+          </div>
+          <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
+            {skills.map((di, i) => {
+              return (
+                <Button
+                  className="bg-cyan-300 text-black hover:bg-cyan-300 hover:text-black cursor-default font-orbitron shadow-md shadow-cyan-800"
+                  key={i}
+                >
+                  {di}
+                </Button>
+              );
+            })}
+          </div>
+        </div>
       </VerticalTimelineElement>
     </div>
   );

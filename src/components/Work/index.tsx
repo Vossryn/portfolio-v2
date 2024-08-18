@@ -39,8 +39,6 @@ const ProjectCard = ({
           border-yellow-300
           bg-black
           p-2
-          hover:shadow-md
-          hover:shadow-cyan-300
         `}
       >
         <div
@@ -60,12 +58,26 @@ const ProjectCard = ({
             alt={`${title} site image`}
             width={475}
             height={238}
-            className="rounded-md border border-cyan-300"
+            className="rounded-md"
           />
         </div>
         <div className="w-full">
           {title && <div>{title}</div>}
           {description && <div>{description}</div>}
+          <div className="flex flex-row space-x-4">
+            {links.map((di, i) => {
+              return <div key={i}>herp</div>;
+            })}
+          </div>
+          <div className="flex flex-row space-x-4">
+            {techs.map((di, i) => {
+              return (
+                <div key={i} className="">
+                  derp
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </Tilt>

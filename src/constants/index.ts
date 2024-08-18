@@ -32,7 +32,7 @@ export const jobHistory: {
     location: "Indianapolis, Indiana, United States",
     description: "",
     logo: "/images/company-icons/ren.jpg",
-    skills: [],
+    skills: ["React", "TypeScript", "CSS"],
   },
   {
     date: "May 2016 - Nov 2021 · 5 yrs 7 mos",
@@ -42,7 +42,7 @@ export const jobHistory: {
     description:
       "Current focus of development is ranging across front-end to back-end development of technologies mainly focused around web API's and AngularJS, as well as integrating all this with the legacy software the company already has to provide a seamless transition from old to new for the customers.",
     logo: "/images/company-icons/cfs.jpg",
-    skills: [],
+    skills: ["NodeJS", "AngularJS", "CSS"],
   },
   {
     date: "Mar 2013 - Jul 2015 · 2 yrs 5 mos",
@@ -52,7 +52,7 @@ export const jobHistory: {
     description:
       "Worked with a team to provide a vast array of solutions to many different types of client needs in the programming/web development world. During my time here I worked with programming languages going across the spectrum such as PHP, Jquery/Javascript, C#, C++, Java.",
     logo: "/images/company-icons/dynamic_quest.jpg",
-    skills: [],
+    skills: ["Java", ".NET", "CSS"],
   },
   {
     date: "Jan 2012 - Aug 2012 · 8 mos",
@@ -62,7 +62,7 @@ export const jobHistory: {
     description:
       "Worked with a team to help the company with its creation of its new and improved web site and internet store front.",
     logo: "/images/company-icons/graphik_dimensions.jpg",
-    skills: [],
+    skills: ["HTML", "CSS", "PHP"],
   },
   {
     date: "Mar 2010 - Apr 2010 · 2 mos",
@@ -72,7 +72,7 @@ export const jobHistory: {
     description:
       "While present at the company I was part of a 2 man team that developed and implemented an system for employee's to look up and maintain information about individuals that entered contests via the companies web site.",
     logo: "/images/company-icons/greensboro-new-record.jpg",
-    skills: [],
+    skills: ["HTML", "CSS", "PHP"],
   },
 ];
 
@@ -84,6 +84,7 @@ export const projects: {
   links: {
     href: string;
     name: string;
+    type: string;
   }[];
 }[] = [
   {
@@ -96,6 +97,7 @@ export const projects: {
       {
         href: "https://southerndistrictscouting.org/",
         name: "Southern District of ECC Scouting",
+        type: "website",
       },
     ],
   },

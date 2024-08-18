@@ -22,7 +22,7 @@ export default function RootLayout({
       className="scroll-smooth w-full h-full scrollbar-thumb-yellow-300 scrollbar-track-black scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
     >
       <body
-        className={`${roboto.className} bg-black bg-circuit-board text-white w-full h-full flex flex-col overflow-x-hidden`}
+        className={`${roboto.className} bg-black bg-circuit-board text-white w-full h-full flex flex-col overflow-x-hidden pb-12`}
       >
         <Header />
         {children}
