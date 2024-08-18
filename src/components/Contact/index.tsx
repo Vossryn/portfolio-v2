@@ -6,25 +6,25 @@ const Contact = () => {
   return (
     <div className="flex flex-col sm:flex-row w-full gap-4">
       <div>
-        <p>Why Work With Me?</p>
+        <p className="text-xl">Why Work With Me?</p>
         <ul className="my-4 pl-2">
           <li>
-            <CheckCircledIcon className="mr-2 inline text-cyan-300" />
+            <CheckCircledIcon className="h-8 w-8 mr-2 inline text-cyan-300" />
             <span className="font-bold font-orbitron">Passion</span>: I
             genuinely love what I do, and that passion reflects in my work.
           </li>
           <li>
-            <CheckCircledIcon className="mr-2 inline text-cyan-300" />
+            <CheckCircledIcon className="h-8 w-8 mr-2 inline text-cyan-300" />
             <span className="font-bold font-orbitron">Collaboration</span>: I
             enjoy collaborating with fellow creatives and problem-solvers.
           </li>
           <li>
-            <CheckCircledIcon className="mr-2 inline text-cyan-300" />
+            <CheckCircledIcon className="h-8 w-8 mr-2 inline text-cyan-300" />
             <span className="font-bold font-orbitron">Results-Driven</span>: I
             focus on delivering results that exceed expectations.
           </li>
           <li>
-            <CheckCircledIcon className="mr-2 inline text-cyan-300" />
+            <CheckCircledIcon className="h-8 w-8 mr-2 inline text-cyan-300" />
             <span className="font-bold font-orbitron">Continuous Growth</span>:
             Learning is a lifelong journey, and I embrace it wholeheartedly.
           </li>
