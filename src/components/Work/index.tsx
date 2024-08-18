@@ -1,9 +1,12 @@
 "use client";
 
+import { GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
+import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 
-import { projects } from "@/constants";
+import { Button } from "@/components/ui/button";
+import { Iprojects, projects } from "@/constants";
 import { SectionWrapper } from "@/hoc";
 import JobTimeline from "./JobTimeline";
 
@@ -14,17 +17,7 @@ const ProjectCard = ({
   description = "",
   techs = [],
   links = [],
-}: {
-  orientation?: "left" | "right";
-  image: string;
-  title: string;
-  description: string;
-  techs: string[];
-  links: {
-    href: string;
-    name: string;
-  }[];
-}) => {
+}: { orientation: string } & Iprojects) => {
   return (
     <Tilt transitionSpeed={2500}>
       <div
@@ -61,20 +54,30 @@ const ProjectCard = ({
             className="rounded-md"
           />
         </div>
-        <div className="w-full">
-          {title && <div>{title}</div>}
-          {description && <div>{description}</div>}
-          <div className="flex flex-row space-x-4">
-            {links.map((di, i) => {
-              return <div key={i}>herp</div>;
+        <div className="w-full flex flex-col justify-between">
+          <div className="space-y-2">
+            {title && <div className="text-lg">{title}</div>}
+            {description && <div>{description}</div>}
+          </div>
+          <div className="flex flex-row space-x-4 w-full">
+            {links.map(({ href, name, icon }, i) => {
+              return (
+                <Link key={i} href={href} title={name}>
+                  {icon === "website" && <GlobeIcon className="w-8 h-8" />}
+                  {icon === "github" && <GitHubLogoIcon className="w-8 h-8" />}
+                </Link>
+              );
             })}
           </div>
-          <div className="flex flex-row space-x-4">
+          <div className="flex flex-row flex-wrap gap-2">
             {techs.map((di, i) => {
               return (
-                <div key={i} className="">
-                  derp
-                </div>
+                <Button
+                  className="bg-cyan-300 text-black hover:bg-cyan-300 hover:text-black cursor-default font-orbitron"
+                  key={i}
+                >
+                  {di}
+                </Button>
               );
             })}
           </div>

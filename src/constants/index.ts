@@ -1,7 +1,9 @@
-export const aboutItems: {
+export interface IaboutItems {
   title: string;
   image: string;
-}[] = [
+}
+
+export const aboutItems: IaboutItems[] = [
   {
     title: "UX",
     image: "/images/ux-icon.png",
@@ -16,7 +18,7 @@ export const aboutItems: {
   },
 ];
 
-export const jobHistory: {
+export interface IjobHistory {
   date: string;
   company: string;
   title: string;
@@ -24,7 +26,9 @@ export const jobHistory: {
   description: string;
   logo: string;
   skills: string[];
-}[] = [
+}
+
+export const jobHistory: IjobHistory[] = [
   {
     date: "Nov 2021 - Present · Ongoing",
     company: "REN",
@@ -76,7 +80,7 @@ export const jobHistory: {
   },
 ];
 
-export const projects: {
+export interface Iprojects {
   image: string;
   title: string;
   description: string;
@@ -84,20 +88,27 @@ export const projects: {
   links: {
     href: string;
     name: string;
-    type: string;
+    icon: "website" | "github";
   }[];
-}[] = [
+}
+
+export const projects: Iprojects[] = [
   {
     image: "/images/southern_district_website_screen_shot.png",
     title: "Southern District BSA Website",
     description:
       "Website built for the Southern District East Carolina Council Scouting group in North Carolina.",
-    techs: [],
+    techs: ["NextJS", "React", "TypeScript", "Tailwind CSS", "CSS", "HTML"],
     links: [
       {
         href: "https://southerndistrictscouting.org/",
         name: "Southern District of ECC Scouting",
-        type: "website",
+        icon: "website",
+      },
+      {
+        href: "https://southerndistrictscouting.org/",
+        name: "Github Repo",
+        icon: "github",
       },
     ],
   },

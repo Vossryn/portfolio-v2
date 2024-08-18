@@ -79,11 +79,11 @@ const TimeLineItem = ({
             </h4>
             <p>{description}</p>
           </div>
-          <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
+          <div className="flex flex-row flex-wrap gap-4">
             {skills.map((di, i) => {
               return (
                 <Button
-                  className="bg-cyan-300 text-black hover:bg-cyan-300 hover:text-black cursor-default font-orbitron shadow-md shadow-cyan-800"
+                  className="bg-cyan-300 text-black hover:bg-cyan-300 hover:text-black cursor-default font-orbitron"
                   key={i}
                 >
                   {di}
