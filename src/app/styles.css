@@ -3,6 +3,7 @@
 
   &::after {
     content: "";
+    display: none;
     position: absolute;
     z-index: -10;
     left: -9999px;
@@ -14,5 +15,13 @@
       rgba(0, 0, 0, 1) 25%,
       rgba(0, 0, 0, 0) 100%
     );
+  }
+}
+
+@media (min-width: 640px) {
+  .with-fader {
+    &::after {
+      display: unset;
+    }
   }
 }

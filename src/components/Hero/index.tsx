@@ -22,7 +22,7 @@ export default function Hero() {
   }, [index]);
 
   return (
-    <div className="flex-none h-[calc(100%-60px)] flex flex-col justify-center items-center bg-hero-pattern bg-cover bg-top">
+    <div className="flex-none h-full flex flex-col justify-center items-center bg-hero-pattern bg-cover bg-top">
       <div className="grow w-full flex flex-col items-center justify-center overflow-hidden">
         <div className="relative w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] mx-4 mt-4 md:mx-8 md:mt-8">
           <Image
