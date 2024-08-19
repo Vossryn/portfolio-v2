@@ -36,7 +36,7 @@ const Contact = () => {
           mind!
         </p>
       </div>
-      <div className="flex-none w-full sm:w-[400px] p-2 border border-yellow-300 rounded-md">
+      <div className="flex-none w-full sm:w-[400px] p-4 border border-yellow-300 rounded-md">
         <ContactForm />
       </div>
     </div>

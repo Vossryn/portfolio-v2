@@ -31,7 +31,7 @@ const ProjectCard = ({
           border
           border-yellow-300
           bg-black
-          p-2
+          p-4
         `}
       >
         <div
@@ -56,7 +56,7 @@ const ProjectCard = ({
         </div>
         <div className="w-full flex flex-col justify-between">
           <div className="space-y-2">
-            {title && <div className="text-lg">{title}</div>}
+            {title && <div className="text-xl font-bold">{title}</div>}
             {description && <div>{description}</div>}
           </div>
           <div className="flex flex-row space-x-4 w-full">
@@ -69,7 +69,7 @@ const ProjectCard = ({
               );
             })}
           </div>
-          <div className="flex flex-row flex-wrap gap-2">
+          <div className="flex flex-row flex-wrap gap-4">
             {techs.map((di, i) => {
               return (
                 <Button

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import "@/css/glitch-effect.css";
@@ -32,9 +33,20 @@ export default function Hero() {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="hero-name absolute top-8 -left-4 sm:top-16 -rotate-12 text-center text-6xl sm:text-8xl font-cyberpunk text-yellow-300">
-            Britton
-            <br />
-            Flynt
+            <motion.div
+              initial={{ opacity: 0, x: -200 }} // start off-screen to the left
+              animate={{ opacity: 1, x: 0 }} // end at its natural position
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              Britton
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 200 }} // start off-screen to the left
+              animate={{ opacity: 1, x: 0 }} // end at its natural position
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              Flynt
+            </motion.div>
           </div>
         </div>
         <div
