@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
 import { Button } from "@/components/ui/button";
-import { jobHistory } from "@/constants";
-import { useInView } from "react-intersection-observer";
+import { IjobHistory, jobHistory } from "@/constants";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -21,16 +21,7 @@ const TimeLineItem = ({
   logo,
   skills,
   index,
-}: {
-  date: string;
-  company: string;
-  title: string;
-  location: string;
-  description: string;
-  logo: string;
-  skills: string[];
-  index: number;
-}) => {
+}: { index: number } & IjobHistory) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
     triggerOnce: true,
@@ -99,10 +90,12 @@ const TimeLineItem = ({
 
 export default function JobTimeline() {
   return (
-    <VerticalTimeline lineColor="#fde047" className="space-y-8">
-      {jobHistory.map((di, i) => {
-        return <TimeLineItem {...di} index={i} key={i} />;
-      })}
-    </VerticalTimeline>
+    <div className="space-y-8">
+      <VerticalTimeline lineColor="#fde047">
+        {jobHistory.map((di, i) => {
+          return <TimeLineItem {...di} index={i} key={i} />;
+        })}
+      </VerticalTimeline>
+    </div>
   );
 }
