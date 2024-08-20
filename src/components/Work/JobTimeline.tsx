@@ -28,7 +28,7 @@ const TimeLineItem = ({
   });
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="mb-4">
       <VerticalTimelineElement
         visible={inView}
         position={index % 2 === 0 ? "right" : "left"}

@@ -54,7 +54,7 @@ const ProjectCard = ({
             className="rounded-md"
           />
         </div>
-        <div className="w-full flex flex-col justify-between">
+        <div className="w-full flex flex-col justify-between gap-4">
           <div className="space-y-2">
             {title && <div className="text-xl font-bold">{title}</div>}
             {description && <div>{description}</div>}

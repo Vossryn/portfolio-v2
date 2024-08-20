@@ -107,7 +107,7 @@ export default function ContactForm() {
           <Button
             onMouseOver={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
-            className="relative px-4 py-2 text-yellow-300 hover:text-cyan-300 min-w-28 font-orbitron"
+            className="relative px-4 py-2 text-yellow-300 hover:text-cyan-300 bg-transparent hover:bg-transparent min-w-28 font-orbitron"
             style={borderImageStyle}
             type="submit"
           >
