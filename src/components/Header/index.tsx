@@ -2,10 +2,10 @@
 
 import { linkProps } from "@/interfaces";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 import { useOutsideClick } from "@/lib/utils";
-import { motion } from "framer-motion";
 import LinkButton from "./LinkButton";
 
 const _Links: linkProps[] = [
