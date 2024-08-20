@@ -2,7 +2,7 @@ const SectionWrapper = (
   Component: React.ComponentType,
   idName: string = "",
   heading: string = "",
-  subHeading: string = "",
+  subHeading: string = ""
 ) =>
   function HOC() {
     return (

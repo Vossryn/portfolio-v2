@@ -6,16 +6,12 @@ import Tilt from "react-parallax-tilt";
 import { Card, CardContent } from "@/components/ui/card";
 import { aboutItems, technologies } from "@/constants";
 import { SectionWrapper } from "@/hoc";
-
+import { cardBorderImageStyle } from "@/lib/utils";
 import BallCanvas from "./Ball";
+
 import "./styles.css";
 
 const About = () => {
-  const borderImageStyle = {
-    borderWidth: "0px 20px",
-    borderImage: `url("/svgs/voice-call-border.svg") 0 20 fill / 1 / 0 stretch`,
-  };
-
   return (
     <>
       <p>
@@ -31,7 +27,7 @@ const About = () => {
         {aboutItems.map((di, index) => (
           <Tilt key={index} scale={1.15} transitionSpeed={2500}>
             <Card
-              style={borderImageStyle}
+              style={cardBorderImageStyle}
               className="w-[250px] h-[300px] bg-black text-white border-0 m-4"
             >
               <CardContent className="flex flex-col justify-center items-center space-y-4 h-full">

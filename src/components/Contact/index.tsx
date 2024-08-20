@@ -4,7 +4,8 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col sm:flex-row w-full gap-4">
+    <div className="flex flex-col sm:flex-row w-full gap-8">
+      <ContactForm />
       <div>
         <p className="text-xl">Why Work With Me?</p>
         <ul className="my-4 pl-2">
@@ -35,9 +36,6 @@ const Contact = () => {
           gaming, coding, web technology or any exciting project you have in
           mind!
         </p>
-      </div>
-      <div className="flex-none w-full sm:w-[400px] p-4 border border-yellow-300 rounded-md">
-        <ContactForm />
       </div>
     </div>
   );

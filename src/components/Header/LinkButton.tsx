@@ -1,16 +1,11 @@
 "use client";
 
 import { linkProps } from "@/interfaces";
+import { useButtonBorderImage } from "@/lib/utils";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function LinkButton({ href, name }: linkProps) {
-  const [hover, setHover] = useState(false);
-
-  const borderImageStyle = {
-    borderWidth: "0px 20px",
-    borderImage: `url("/svgs/button-${hover ? "cyan" : "yellow"}.svg") 0 20 fill / 1 / 0 stretch`,
-  };
+  const [borderImageStyle, setHover] = useButtonBorderImage(false);
 
   return (
     <Link
