@@ -14,12 +14,12 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { sendEmail } from "@/lib/actions";
 import { cardBorderImageStyle, useButtonBorderImage } from "@/lib/utils";
 import { Textarea } from "../ui/textarea";
 
 const formSchema = z.object({
   email: z.string().min(2).max(100),
-  subject: z.string().min(2).max(100),
   body: z.string().min(2).max(500),
 });
 
@@ -29,15 +29,12 @@ export default function ContactForm() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
-      subject: "",
       body: "",
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+    sendEmail(values);
   }
 
   return (
@@ -58,7 +55,7 @@ export default function ContactForm() {
                 <FormControl>
                   <Input
                     className="border-yellow-300"
-                    placeholder="V@edgerunner.com"
+                    placeholder="v@edgerunner.com"
                     {...field}
                   />
                 </FormControl>
@@ -68,35 +65,16 @@ export default function ContactForm() {
           />
           <FormField
             control={form.control}
-            name="subject"
+            name="body"
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="font-orbitron text-yellow-300">
-                  Subject
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    className="border-yellow-300"
-                    placeholder="Hey choom, let's talk!"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="subject"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="font-orbitron text-yellow-300">
-                  Subject
+                  Body
                 </FormLabel>
                 <FormControl>
                   <Textarea
                     className="border-yellow-300"
-                    placeholder="Here's the deets Edgerunner..."
+                    placeholder="Here are the deets choom..."
                     {...field}
                   />
                 </FormControl>
