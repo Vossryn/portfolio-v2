@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 import { useOutsideClick } from "@/lib/utils";
+import ContactLinks from "../ContactLinks";
 import LinkButton from "./LinkButton";
 
 const _Links: linkProps[] = [
@@ -31,7 +32,7 @@ export default function Header() {
 
   return (
     <div className="relative flex justify-between items-center p-2 font-orbitron font-bold text-lg bg-black text-yellow-300 border-b border-b-yellow-300">
-      <div>Britton Flynt</div>
+      <ContactLinks />
       <ul className="hidden sm:flex space-x-4">
         {_Links.map((di) => (
           <LinkButton key={di.name} {...di} />

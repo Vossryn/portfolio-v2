@@ -1,5 +1,8 @@
+"use client";
+
 import { SectionWrapper } from "@/hoc";
 import { CheckCircledIcon } from "@radix-ui/react-icons";
+import ContactLinks from "../ContactLinks";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
@@ -36,6 +39,7 @@ const Contact = () => {
           gaming, coding, web technology or any exciting project you have in
           mind!
         </p>
+        <ContactLinks className="mt-4" />
       </div>
     </div>
   );
