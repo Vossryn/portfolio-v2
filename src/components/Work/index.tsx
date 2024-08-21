@@ -8,6 +8,8 @@ import Tilt from "react-parallax-tilt";
 import { Button } from "@/components/ui/button";
 import { Iprojects, projects } from "@/constants";
 import { SectionWrapper } from "@/hoc";
+import { staggerContainer } from "@/utils/motion";
+import { motion } from "framer-motion";
 import JobTimeline from "./JobTimeline";
 
 const ProjectCard = ({
@@ -20,19 +22,12 @@ const ProjectCard = ({
 }: { orientation: string } & Iprojects) => {
   return (
     <Tilt transitionSpeed={2500}>
-      <div
-        className={`
-          flex 
-          flex-col
-          sm:flex-row 
-          ${orientation === "right" ? "sm:flex-row-reverse" : ""}
-          rounded-lg
-          overflow-hidden
-          border
-          border-yellow-300
-          bg-black
-          p-4
-        `}
+      <motion.div
+        className={`flex flex-col sm:flex-row ${orientation === "right" ? "sm:flex-row-reverse" : ""} rounded-lg overflow-hidden border border-yellow-300 bg-black p-4`}
+        variants={staggerContainer()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
       >
         <div
           className={`
@@ -82,7 +77,7 @@ const ProjectCard = ({
             })}
           </div>
         </div>
-      </div>
+      </motion.div>
     </Tilt>
   );
 };

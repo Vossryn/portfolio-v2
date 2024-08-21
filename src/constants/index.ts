@@ -128,5 +128,6 @@ export const technologies: string[] = [
   // "threejs",
   // "jquery",
   // "mysql",
-  "postgresql",
+  // "postgresql",
+  "sql",
 ];
