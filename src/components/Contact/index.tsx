@@ -14,23 +14,31 @@ const Contact = () => {
         <ul className="my-4 pl-2">
           <li>
             <CheckCircledIcon className="h-8 w-8 mr-2 inline text-cyan-300" />
-            <span className="font-bold font-orbitron">Passion</span>: I
-            genuinely love what I do, and that passion reflects in my work.
+            <span className="font-bold font-orbitron text-yellow-300">
+              Passion
+            </span>
+            : I genuinely love what I do, and that passion reflects in my work.
           </li>
           <li>
             <CheckCircledIcon className="h-8 w-8 mr-2 inline text-cyan-300" />
-            <span className="font-bold font-orbitron">Collaboration</span>: I
-            enjoy collaborating with fellow creatives and problem-solvers.
+            <span className="font-bold font-orbitron text-yellow-300">
+              Collaboration
+            </span>
+            : I enjoy collaborating with fellow creatives and problem-solvers.
           </li>
           <li>
             <CheckCircledIcon className="h-8 w-8 mr-2 inline text-cyan-300" />
-            <span className="font-bold font-orbitron">Results-Driven</span>: I
-            focus on delivering results that exceed expectations.
+            <span className="font-bold font-orbitron text-yellow-300">
+              Results-Driven
+            </span>
+            : I focus on delivering results that exceed expectations.
           </li>
           <li>
             <CheckCircledIcon className="h-8 w-8 mr-2 inline text-cyan-300" />
-            <span className="font-bold font-orbitron">Continuous Growth</span>:
-            Learning is a lifelong journey, and I embrace it wholeheartedly.
+            <span className="font-bold font-orbitron text-yellow-300">
+              Continuous Growth
+            </span>
+            : Learning is a lifelong journey, and I embrace it wholeheartedly.
           </li>
         </ul>
         <p>

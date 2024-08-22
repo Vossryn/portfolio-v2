@@ -34,7 +34,8 @@ export const jobHistory: IjobHistory[] = [
     company: "REN",
     title: "Software Engineer",
     location: "Indianapolis, Indiana, United States",
-    description: "",
+    description:
+      "I started off as a full stack JavaScript develoer, but over time I progressed more to front-end work. When I'm not doing work on the front-end of our products I lend my help to the other developer, when and where I can, to help solve issues with speed and accuracy.",
     logo: "/images/company-icons/ren.jpg",
     skills: ["React", "TypeScript", "CSS"],
   },
