@@ -23,4 +23,6 @@ export async function sendEmail({
   if (error) {
     console.error(error);
   }
+
+  return data;
 }
