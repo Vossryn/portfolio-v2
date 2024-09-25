@@ -33,8 +33,9 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    sendEmail(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    await sendEmail(values);
+    form.reset();
   }
 
   return (
