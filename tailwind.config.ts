@@ -77,7 +77,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        "hero-pattern": "url('/images/background-img.png')",
+        "hero-pattern": "url('/images/background-img-compressed.png')",
         "circuit-board": "url('/svgs/circuit-board.svg')",
       },
     },
