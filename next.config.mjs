@@ -2,13 +2,12 @@ import BundleAnalyzer from '@next/bundle-analyzer';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["three"],
-  serverExternalPackages: [
-    "@react-three/drei",
-    "@react-three/fiber",
-    "three",
-  ],
   experimental: {
+    serverComponentsExternalPackages: [
+      "@react-three/drei",
+      "@react-three/fiber",
+      "three",
+    ],
     optimizePackageImports: [
       "@hookform/resolvers",
       "@next/bundle-analyzer",
