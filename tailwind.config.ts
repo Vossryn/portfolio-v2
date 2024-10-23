@@ -9,6 +9,13 @@ const config = {
     "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
+  purge: {
+    enabled: process.env.NODE_ENV === "production",
+    content: ["./src/**/*.{js,ts,jsx,tsx}"],
+    options: {
+      safelist: [],
+    },
+  },
   theme: {
     container: {
       center: true,
