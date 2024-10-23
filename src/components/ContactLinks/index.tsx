@@ -22,6 +22,8 @@ export default function ContactLinks({ className }: { className?: string }) {
         <Link
           target="_blank"
           prefetch={false}
+          title="Linkedin"
+          aria-label="Linkedin"
           href="https://www.linkedin.com/in/philip-flynt-21b4a722/"
         >
           <LinkedinSVG className="w-6 h-6 fill-yellow-300 group-hover:fill-cyan-300" />
@@ -31,6 +33,8 @@ export default function ContactLinks({ className }: { className?: string }) {
         <Link
           target="_blank"
           prefetch={false}
+          title="Github"
+          aria-label="Github"
           href="https://github.com/Vossryn"
         >
           <GithubSVG className="w-6 h-6 fill-yellow-300 group-hover:fill-cyan-300" />
