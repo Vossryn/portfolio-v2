@@ -60,7 +60,7 @@ export default function ContactForm() {
                 </FormLabel>
                 <FormControl>
                   <Input
-                    className="border-yellow-300"
+                    className="border-yellow-300 hover:border-cyan-300"
                     placeholder="v@edgerunner.com"
                     disabled={sent}
                     {...field}
@@ -80,7 +80,7 @@ export default function ContactForm() {
                 </FormLabel>
                 <FormControl>
                   <Textarea
-                    className="border-yellow-300"
+                    className="border-yellow-300 hover:border-cyan-300"
                     placeholder="Here are the deets choom..."
                     disabled={sent}
                     {...field}
