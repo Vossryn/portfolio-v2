@@ -107,7 +107,7 @@ export const projects: Iprojects[] = [
         icon: "website",
       },
       {
-        href: "https://southerndistrictscouting.org/",
+        href: "https://github.com/Vossryn/bsa-southern-district",
         name: "Github Repo",
         icon: "github",
       },

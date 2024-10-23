@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import { ExternalLinkIcon } from "@radix-ui/react-icons/dist/ExternalLinkIcon";
 import Link from "next/link";
 
 import GithubSVG from "./GithubSVG";

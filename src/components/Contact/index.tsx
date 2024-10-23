@@ -1,7 +1,8 @@
 "use client";
 
-import { SectionWrapper } from "@/hoc";
-import { CheckCircledIcon } from "@radix-ui/react-icons";
+import SectionWrapper from "@/hoc/SectionWrapper";
+import CheckCircledIcon from "@radix-ui/react-icons/dist/CheckCircledIcon";
+
 import ContactLinks from "../ContactLinks";
 import ContactForm from "./ContactForm";
 
