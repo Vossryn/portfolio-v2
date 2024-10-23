@@ -35,7 +35,7 @@ export default function Header() {
         ))}
       </ul>
       <div className="sm:hidden w-10 h-10">
-        <Hamburger toggled={showMenu} toggle={setShowMenu} />
+        <Hamburger toggled={showMenu} toggle={setShowMenu} label="main-menu" />
       </div>
       <motion.div
         initial={{ height: 0 }}
