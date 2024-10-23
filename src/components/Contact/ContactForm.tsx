@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { sendEmail } from "@/lib/actions";
 import { cardBorderImageStyle, useButtonBorderImage } from "@/lib/utils";
+import { useState } from "react";
 import { Textarea } from "../ui/textarea";
 
 const formSchema = z.object({
@@ -24,6 +25,7 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+  const [sent, setSent] = useState(false);
   const [borderImageStyle, setHover] = useButtonBorderImage(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -34,8 +36,11 @@ export default function ContactForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    await sendEmail(values);
-    form.reset();
+    if (!sent) {
+      setSent(true);
+      await sendEmail(values);
+      form.reset();
+    }
   }
 
   return (
@@ -57,6 +62,7 @@ export default function ContactForm() {
                   <Input
                     className="border-yellow-300"
                     placeholder="v@edgerunner.com"
+                    disabled={sent}
                     {...field}
                   />
                 </FormControl>
@@ -76,6 +82,7 @@ export default function ContactForm() {
                   <Textarea
                     className="border-yellow-300"
                     placeholder="Here are the deets choom..."
+                    disabled={sent}
                     {...field}
                   />
                 </FormControl>
@@ -86,6 +93,7 @@ export default function ContactForm() {
           <Button
             onMouseOver={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
+            disabled={sent}
             className="relative px-4 py-2 text-yellow-300 hover:text-cyan-300 bg-transparent hover:bg-transparent min-w-28 font-orbitron"
             style={borderImageStyle}
             type="submit"
