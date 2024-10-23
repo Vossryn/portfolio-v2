@@ -6,7 +6,7 @@ const nextConfig = {
     serverComponentsExternalPackages: [
       "@react-three/drei",
       "@react-three/fiber",
-      "three",
+      "three"
     ],
     optimizePackageImports: [
       "@hookform/resolvers",
