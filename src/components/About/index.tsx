@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 
@@ -7,9 +8,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { aboutItems, technologies } from "@/constants";
 import { SectionWrapper } from "@/hoc";
 import { cardBorderImageStyle } from "@/lib/utils";
-import BallCanvas from "./Ball";
 
 import "./styles.css";
+
+const LazyBall = dynamic(() => import("./Ball"), {
+  ssr: false,
+  loading: () => <span>Loading...</span>,
+});
 
 const About = () => {
   return (
@@ -48,7 +53,7 @@ const About = () => {
         {technologies.map((icon) => {
           return (
             <div key={icon} className="h-32 w-32">
-              <BallCanvas icon={icon} />
+              <LazyBall icon={icon} />
             </div>
           );
         })}
