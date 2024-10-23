@@ -23,7 +23,7 @@ export default function Hero() {
   }, [index]);
 
   return (
-    <div className="flex-none h-full flex flex-col justify-center items-center bg-hero-pattern bg-cover bg-top">
+    <div className="flex-none h-screen flex flex-col justify-center items-center bg-hero-pattern bg-cover bg-top">
       <div className="grow w-full flex flex-col items-center justify-center overflow-hidden">
         <div className="relative mx-4 mt-4 md:mx-8 md:mt-8">
           <motion.div
