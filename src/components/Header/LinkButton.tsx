@@ -16,6 +16,7 @@ export default function LinkButton({
     <Link
       key={name}
       href={href}
+      prefetch={false}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={onClick}
