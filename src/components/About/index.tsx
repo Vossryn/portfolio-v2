@@ -9,11 +9,12 @@ import { aboutItems, technologies } from "@/constants";
 import { SectionWrapper } from "@/hoc";
 import { cardBorderImageStyle } from "@/lib/utils";
 
+import { Suspense } from "react";
 import "./styles.css";
 
 const LazyBall = dynamic(() => import("./Ball"), {
   ssr: false,
-  loading: () => <span>Loading...</span>,
+  loading: () => <div>Loading...</div>,
 });
 
 const About = () => {
@@ -53,7 +54,9 @@ const About = () => {
         {technologies.map((icon) => {
           return (
             <div key={icon} className="h-32 w-32">
-              <LazyBall icon={icon} />
+              <Suspense fallback={<div>Loading...</div>}>
+                <LazyBall icon={icon} />
+              </Suspense>
             </div>
           );
         })}
