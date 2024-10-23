@@ -1,8 +1,6 @@
 "use client";
 
-import GitHubLogoIcon from "@radix-ui/react-icons/dist/GitHubLogoIcon";
-import GlobeIcon from "@radix-ui/react-icons/dist/GlobeIcon";
-import { motion } from "framer-motion";
+import { GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
@@ -11,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Iprojects, projects } from "@/constants";
 import { SectionWrapper } from "@/hoc";
 import { staggerContainer } from "@/utils/motion";
+import { motion } from "framer-motion";
 import JobTimeline from "./JobTimeline";
 
 const ProjectCard = ({

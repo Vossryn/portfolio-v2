@@ -5,7 +5,7 @@ import { Float } from "@react-three/drei/core/Float";
 import { OrbitControls } from "@react-three/drei/core/OrbitControls";
 import { Preload } from "@react-three/drei/core/Preload";
 import { useTexture } from "@react-three/drei/core/Texture";
-import { Canvas } from "@react-three/fiber/dist/declarations/src/web/Canvas";
+import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 
 import CanvasLoader from "../canvas/Loader";
