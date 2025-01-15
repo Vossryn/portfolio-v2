@@ -7,7 +7,7 @@ import "@/css/glitch-effect.css";
 import "@/css/hero-text-stroke.css";
 import { useEffect, useState } from "react";
 
-const titles = ["Front-end", "Back-end"];
+const titles = ["Software Engineer", "Web Developer", "Web Designer"];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
