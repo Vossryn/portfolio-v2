@@ -46,7 +46,7 @@ export default function ContactForm() {
   return (
     <div
       style={{ ...cardBorderImageStyle }}
-      className="flex-none w-full sm:w-[400px] px-4 pt-8 pb-10"
+      className="flex-none w-full md:max-w-[400px] h-fit px-4 pt-8 pb-10"
     >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">

@@ -23,7 +23,7 @@ const ProjectCard = ({
   return (
     <Tilt transitionSpeed={2500}>
       <motion.div
-        className={`flex flex-col sm:flex-row ${orientation === "right" ? "sm:flex-row-reverse" : ""} rounded-lg overflow-hidden border-2 border-yellow-300 bg-black p-4`}
+        className={`flex flex-col lg:flex-row ${orientation === "right" ? "sm:flex-row-reverse" : ""} rounded-lg overflow-hidden border-2 border-yellow-300 bg-black p-4`}
         variants={staggerContainer()}
         initial="hidden"
         whileInView="show"
@@ -32,13 +32,14 @@ const ProjectCard = ({
         <div
           className={`
             flex-none
-            w-fit 
             mb-4
             sm:mb-0
             ${orientation === "right" ? "sm:ml-4" : "sm:mr-4"}
-            bg-slate-700 
             rounded-sm 
             text-center
+            flex
+            justify-center
+            items-center
           `}
         >
           <Image
