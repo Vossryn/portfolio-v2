@@ -58,7 +58,14 @@ const ProjectCard = ({
           <div className="flex flex-row space-x-4 w-full">
             {links.map(({ href, name, icon }, i) => {
               return (
-                <Link key={i} prefetch={false} href={href} title={name}>
+                <Link
+                  key={i}
+                  prefetch={false}
+                  href={href}
+                  title={name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {icon === "website" && <GlobeIcon className="w-8 h-8" />}
                   {icon === "github" && <GitHubLogoIcon className="w-8 h-8" />}
                 </Link>
