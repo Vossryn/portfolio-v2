@@ -102,11 +102,6 @@ export const projects: Iprojects[] = [
     techs: ["NextJS", "React", "TypeScript", "Tailwind CSS", "CSS", "HTML"],
     links: [
       {
-        href: "https://southerndistrictscouting.org/",
-        name: "Southern District of ECC Scouting",
-        icon: "website",
-      },
-      {
         href: "https://github.com/Vossryn/bsa-southern-district",
         name: "Github Repo",
         icon: "github",
