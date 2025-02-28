@@ -98,7 +98,7 @@ export const projects: Iprojects[] = [
     image: "/images/southern_district_website_screen_shot.png",
     title: "Southern District BSA Website",
     description:
-      "Website built for the Southern District East Carolina Council Scouting group in North Carolina.",
+      "Website built for the Southern District East Carolina Council Scouting group in North Carolina.  This website is currently offline and might not go back online.",
     techs: ["NextJS", "React", "TypeScript", "Tailwind CSS", "CSS", "HTML"],
     links: [
       {
